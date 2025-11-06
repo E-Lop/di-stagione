@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Immagini Mancanti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #2d5016;
+        }
+        .instructions {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ffc107;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .image-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            border: 2px solid #e0e0e0;
+        }
+        .image-card h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+            font-size: 20px;
+        }
+        .filename {
+            background: #f0f0f0;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+            margin: 10px 0;
+            color: #d63384;
+        }
+        .download-btn {
+            display: block;
+            background: #2d5016;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background: #3d6020;
+        }
+        .alternative-btn {
+            display: block;
+            background: #6c757d;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 8px;
+        }
+        .alternative-btn:hover {
+            background: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <h1>🥗 Download Immagini Mancanti/Errate</h1>
+
+    <div class="instructions">
+        <h2>⚠️ Queste immagini devono essere corrette:</h2>
+        <ul>
+            <li><strong>peperoni.jpg</strong> - Non scaricata</li>
+            <li><strong>zucca.jpg</strong> - Immagine sbagliata</li>
+            <li><strong>radicchio.jpg</strong> - Immagine sbagliata</li>
+            <li><strong>finocchi.jpg</strong> - Immagine sbagliata</li>
+            <li><strong>spinaci.jpg</strong> - Immagine sbagliata</li>
+        </ul>
+        <p><strong>Procedura:</strong></p>
+        <ol>
+            <li>Clicca "📥 Download" sotto ogni immagine</li>
+            <li>Salva il file con il nome esatto mostrato</li>
+            <li>Sposta il file in: <code>public/images/products/</code></li>
+            <li>Se un'immagine non ti convince, prova il link alternativo</li>
+        </ol>
+    </div>
+
+    <div class="image-grid">
+        <!-- Peperoni -->
+        <div class="image-card">
+            <img src="https://images.pexels.com/photos/3872425/pexels-photo-3872425.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Peperoni">
+            <h3>🌶️ Peperoni</h3>
+            <div class="filename">Salva come: peperoni.jpg</div>
+            <a href="https://images.pexels.com/photos/3872425/pexels-photo-3872425.jpeg?auto=compress&cs=tinysrgb&w=400" download="peperoni.jpg" class="download-btn">
+                📥 Download Peperoni
+            </a>
+            <a href="https://images.pexels.com/photos/1271918/pexels-photo-1271918.jpeg?auto=compress&cs=tinysrgb&w=400" download="peperoni.jpg" class="alternative-btn">
+                Alternativa 1
+            </a>
+            <a href="https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&w=400" download="peperoni.jpg" class="alternative-btn">
+                Alternativa 2
+            </a>
+        </div>
+
+        <!-- Spinaci -->
+        <div class="image-card">
+            <img src="https://images.pexels.com/photos/2255935/pexels-photo-2255935.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Spinaci">
+            <h3>🥬 Spinaci</h3>
+            <div class="filename">Salva come: spinaci.jpg</div>
+            <a href="https://images.pexels.com/photos/2255935/pexels-photo-2255935.jpeg?auto=compress&cs=tinysrgb&w=400" download="spinaci.jpg" class="download-btn">
+                📥 Download Spinaci
+            </a>
+            <a href="https://images.pexels.com/photos/1656663/pexels-photo-1656663.jpeg?auto=compress&cs=tinysrgb&w=400" download="spinaci.jpg" class="alternative-btn">
+                Alternativa 1
+            </a>
+        </div>
+
+        <!-- Zucca -->
+        <div class="image-card">
+            <img src="https://images.pexels.com/photos/1656666/pexels-photo-1656666.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Zucca">
+            <h3>🎃 Zucca</h3>
+            <div class="filename">Salva come: zucca.jpg</div>
+            <a href="https://images.pexels.com/photos/1656666/pexels-photo-1656666.jpeg?auto=compress&cs=tinysrgb&w=400" download="zucca.jpg" class="download-btn">
+                📥 Download Zucca
+            </a>
+            <a href="https://images.pexels.com/photos/1482101/pexels-photo-1482101.jpeg?auto=compress&cs=tinysrgb&w=400" download="zucca.jpg" class="alternative-btn">
+                Alternativa 1 (Butternut)
+            </a>
+            <a href="https://images.pexels.com/photos/1305063/pexels-photo-1305063.jpeg?auto=compress&cs=tinysrgb&w=400" download="zucca.jpg" class="alternative-btn">
+                Alternativa 2 (Orange Pumpkin)
+            </a>
+        </div>
+
+        <!-- Radicchio -->
+        <div class="image-card">
+            <img src="https://images.pexels.com/photos/5945798/pexels-photo-5945798.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Radicchio">
+            <h3>🥬 Radicchio</h3>
+            <div class="filename">Salva come: radicchio.jpg</div>
+            <a href="https://images.pexels.com/photos/5945798/pexels-photo-5945798.jpeg?auto=compress&cs=tinysrgb&w=400" download="radicchio.jpg" class="download-btn">
+                📥 Download Radicchio
+            </a>
+            <a href="https://images.pexels.com/photos/7763674/pexels-photo-7763674.jpeg?auto=compress&cs=tinysrgb&w=400" download="radicchio.jpg" class="alternative-btn">
+                Alternativa 1
+            </a>
+        </div>
+
+        <!-- Finocchi -->
+        <div class="image-card">
+            <img src="https://images.pexels.com/photos/7763629/pexels-photo-7763629.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Finocchi">
+            <h3>🌿 Finocchi</h3>
+            <div class="filename">Salva come: finocchi.jpg</div>
+            <a href="https://images.pexels.com/photos/7763629/pexels-photo-7763629.jpeg?auto=compress&cs=tinysrgb&w=400" download="finocchi.jpg" class="download-btn">
+                📥 Download Finocchi
+            </a>
+            <a href="https://images.pexels.com/photos/6157658/pexels-photo-6157658.jpeg?auto=compress&cs=tinysrgb&w=400" download="finocchi.jpg" class="alternative-btn">
+                Alternativa 1
+            </a>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; padding: 20px; background: white; border-radius: 8px;">
+        <h3>📝 Dopo aver scaricato tutto:</h3>
+        <ol>
+            <li>Verifica che tutte le immagini siano corrette: <code>./check-images.sh</code></li>
+            <li>Aggiorna il database: <code>php artisan migrate:fresh --seed</code></li>
+            <li>Avvia il server: <code>php artisan serve</code></li>
+            <li>Controlla il sito: <code>http://localhost:8000/products</code></li>
+        </ol>
+    </div>
+</body>
+</html>
