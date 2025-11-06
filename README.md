@@ -170,7 +170,7 @@ Il seeder include una vasta gamma di prodotti stagionali italiani:
 
 **Frutta**: Arance, Mele, Fragole, Ciliegie, Pesche, Albicocche, Uva, Pere, Mandarini, Melone, Anguria, Fichi
 
-**Verdura**: Pomodori, Zucchine, Melanzane, Peperoni, Insalata, Spinaci, Cavolfiore, Broccoli, Carciofi, Asparagi, Fagiolini, Zucca, Radicchio, Finocchi
+**Verdura**: Pomodori, Zucchine, Melanzane, Peperoni, Lattuga, Spinaci, Cavolfiore, Broccoli, Carciofi, Asparagi, Fagiolini, Zucca, Radicchio, Finocchi
 
 ## 🎯 Funzionalità Future
 

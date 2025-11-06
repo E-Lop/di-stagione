@@ -131,9 +131,9 @@ class ProductSeeder extends Seeder
                 'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Green-Red-Orange-Bell-Pepper-Selection.jpg/400px-Green-Red-Orange-Bell-Pepper-Selection.jpg',
             ],
             [
-                'name' => 'Insalata',
+                'name' => 'Lattuga',
                 'type' => 'verdura',
-                'description' => "L'insalata è una verdura a foglia verde, leggera e rinfrescante, disponibile quasi tutto l'anno. Ricca di vitamine e minerali.",
+                'description' => "La lattuga è una verdura a foglia verde, leggera e rinfrescante, disponibile quasi tutto l'anno. Ricca di vitamine e minerali, è la base perfetta per insalate fresche.",
                 'months' => [4, 5, 6, 7, 8, 9], // Apr-Set
                 'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Lactuca_sativa_-_butterhead_lettuce.jpg/400px-Lactuca_sativa_-_butterhead_lettuce.jpg',
             ],
