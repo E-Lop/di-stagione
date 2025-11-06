@@ -6,7 +6,21 @@ echo ""
 # Find all files that are suspiciously small (under 3KB)
 broken_files=()
 
-for img in public/images/products/*.{jpg,png} 2>/dev/null; do
+# Check JPG files
+for img in public/images/products/*.jpg; do
+    if [ -f "$img" ]; then
+        size=$(stat -f%z "$img" 2>/dev/null || stat -c%s "$img" 2>/dev/null)
+        if [ "$size" -lt 3000 ]; then
+            filename=$(basename "$img")
+            echo "🗑️  Removing broken file: $filename (${size} bytes)"
+            rm "$img"
+            broken_files+=("$filename")
+        fi
+    fi
+done
+
+# Check PNG files
+for img in public/images/products/*.png; do
     if [ -f "$img" ]; then
         size=$(stat -f%z "$img" 2>/dev/null || stat -c%s "$img" 2>/dev/null)
         if [ "$size" -lt 3000 ]; then
