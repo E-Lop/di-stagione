@@ -200,4 +200,4 @@ Creato con ❤️ per promuovere il consumo di prodotti locali e stagionali in I
 
 ---
 
-**Nota**: Le immagini dei prodotti sono collegate da Unsplash. Per un uso in produzione, considera di scaricare e hostare le immagini localmente.
+**Nota**: Le immagini dei prodotti provengono da Wikimedia Commons, con licenza libera e URL permanenti. Le immagini sono stabili, affidabili e sempre disponibili.
