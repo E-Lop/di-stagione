@@ -2,23 +2,37 @@
 
 echo "🔧 Fixing 11 incorrect product images..."
 echo ""
-echo "Removing images with wrong content or missing..."
+echo "Removing images with wrong content (if they exist)..."
 echo ""
 
-# Remove the 11 incorrect/missing images
-rm -f public/images/products/asparagi.jpg
-rm -f public/images/products/carciofi.jpg
-rm -f public/images/products/fagiolini.jpg
-rm -f public/images/products/fichi.jpg
-rm -f public/images/products/finocchi.jpg
-rm -f public/images/products/melone.jpg
-rm -f public/images/products/peperoni.jpg
-rm -f public/images/products/radicchio.jpg
-rm -f public/images/products/spinaci.jpg
-rm -f public/images/products/zucca.jpg
-rm -f public/images/products/zucchine.jpg
+# Remove the 11 incorrect/missing images (rm -f doesn't error if file doesn't exist)
+images_to_fix=(
+    "asparagi.jpg"
+    "carciofi.jpg"
+    "fagiolini.jpg"
+    "fichi.jpg"
+    "finocchi.jpg"
+    "melone.jpg"
+    "peperoni.jpg"
+    "radicchio.jpg"
+    "spinaci.jpg"
+    "zucca.jpg"
+    "zucchine.jpg"
+)
 
-echo "✓ Removed 11 incorrect images"
+removed=0
+for img in "${images_to_fix[@]}"; do
+    if [ -f "public/images/products/$img" ]; then
+        rm "public/images/products/$img"
+        echo "  🗑️  Removed: $img"
+        removed=$((removed + 1))
+    else
+        echo "  ⚠️  Not found (will download): $img"
+    fi
+done
+
+echo ""
+echo "✓ Cleaned up $removed existing files"
 echo ""
 echo "Downloading correct images..."
 echo ""
