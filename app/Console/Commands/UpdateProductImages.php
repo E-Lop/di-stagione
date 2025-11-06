@@ -19,7 +19,7 @@ class UpdateProductImages extends Command
      *
      * @var string
      */
-    protected $description = 'Update product images with corrected URLs';
+    protected $description = 'Update product images to use local asset paths';
 
     /**
      * Execute the console command.
@@ -29,35 +29,35 @@ class UpdateProductImages extends Command
         $this->info('Updating product images...');
 
         $imageMap = [
-            // Frutta - Wikimedia Commons
-            'Arance' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Orange-Fruit-Pieces.jpg/400px-Orange-Fruit-Pieces.jpg',
-            'Mele' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/400px-Red_Apple.jpg',
-            'Fragole' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/PerfectStrawberry.jpg/400px-PerfectStrawberry.jpg',
-            'Ciliegie' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cherry_Stella444.jpg/400px-Cherry_Stella444.jpg',
-            'Pesche' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Autumn_Red_peaches.jpg/400px-Autumn_Red_peaches.jpg',
-            'Albicocche' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Apricots.jpg/400px-Apricots.jpg',
-            'Uva' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Kyoho-grape.jpg/400px-Kyoho-grape.jpg',
-            'Pere' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Pears.jpg/400px-Pears.jpg',
-            'Mandarini' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Mandarin_Oranges_%28Citrus_Reticulata%29.jpg/400px-Mandarin_Oranges_%28Citrus_Reticulata%29.jpg',
-            'Melone' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Cantaloupes.jpg/400px-Cantaloupes.jpg',
-            'Anguria' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Taiwan_2009_Tainan_City_Organic_Farm_Watermelon_FRD_7962.jpg/400px-Taiwan_2009_Tainan_City_Organic_Farm_Watermelon_FRD_7962.jpg',
-            'Fichi' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Figs.jpg/400px-Figs.jpg',
+            // Frutta - Local Assets
+            'Arance' => '/images/products/arance.jpg',
+            'Mele' => '/images/products/mele.jpg',
+            'Fragole' => '/images/products/fragole.jpg',
+            'Ciliegie' => '/images/products/ciliegie.jpg',
+            'Pesche' => '/images/products/pesche.jpg',
+            'Albicocche' => '/images/products/albicocche.jpg',
+            'Uva' => '/images/products/uva.jpg',
+            'Pere' => '/images/products/pere.jpg',
+            'Mandarini' => '/images/products/mandarini.jpg',
+            'Melone' => '/images/products/melone.jpg',
+            'Anguria' => '/images/products/anguria.jpg',
+            'Fichi' => '/images/products/fichi.jpg',
 
-            // Verdura - Wikimedia Commons
-            'Pomodori' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/400px-Tomato_je.jpg',
-            'Zucchine' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Courgette_J1.JPG/400px-Courgette_J1.JPG',
-            'Melanzane' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Solanum_melongena_24_08_2012_%281%29.JPG/400px-Solanum_melongena_24_08_2012_%281%29.JPG',
-            'Peperoni' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Green-Red-Orange-Bell-Pepper-Selection.jpg/400px-Green-Red-Orange-Bell-Pepper-Selection.jpg',
-            'Lattuga' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Lactuca_sativa_-_butterhead_lettuce.jpg/400px-Lactuca_sativa_-_butterhead_lettuce.jpg',
-            'Spinaci' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Spinach_bunch.jpg/400px-Spinach_bunch.jpg',
-            'Cavolfiore' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Cauliflower.JPG/400px-Cauliflower.JPG',
-            'Broccoli' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Broccoli_DSC00862.png/400px-Broccoli_DSC00862.png',
-            'Carciofi' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Artichoke_J1.jpg/400px-Artichoke_J1.jpg',
-            'Asparagi' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Asparagus-Bundle.jpg/400px-Asparagus-Bundle.jpg',
-            'Fagiolini' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/ARS_lima_beans.jpg/400px-ARS_lima_beans.jpg',
-            'Zucca' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Calabaza_Butternut.jpg/400px-Calabaza_Butternut.jpg',
-            'Radicchio' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Radicchio_di_Treviso.jpg/400px-Radicchio_di_Treviso.jpg',
-            'Finocchi' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Foeniculum_vulgare_Florence_Fennel.jpg/400px-Foeniculum_vulgare_Florence_Fennel.jpg',
+            // Verdura - Local Assets
+            'Pomodori' => '/images/products/pomodori.jpg',
+            'Zucchine' => '/images/products/zucchine.jpg',
+            'Melanzane' => '/images/products/melanzane.jpg',
+            'Peperoni' => '/images/products/peperoni.jpg',
+            'Lattuga' => '/images/products/lattuga.jpg',
+            'Spinaci' => '/images/products/spinaci.jpg',
+            'Cavolfiore' => '/images/products/cavolfiore.jpg',
+            'Broccoli' => '/images/products/broccoli.jpg',
+            'Carciofi' => '/images/products/carciofi.jpg',
+            'Asparagi' => '/images/products/asparagi.jpg',
+            'Fagiolini' => '/images/products/fagiolini.jpg',
+            'Zucca' => '/images/products/zucca.jpg',
+            'Radicchio' => '/images/products/radicchio.jpg',
+            'Finocchi' => '/images/products/finocchi.jpg',
         ];
 
         $updated = 0;
