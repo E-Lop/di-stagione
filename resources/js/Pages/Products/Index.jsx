@@ -131,7 +131,7 @@ export default function Index({ products, currentMonth, filters }) {
                             <select
                                 value={selectedMonth}
                                 onChange={(e) => handleMonthChange(parseInt(e.target.value))}
-                                className="rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                                className="min-w-[150px] rounded-md border border-gray-300 bg-white pl-4 pr-10 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 cursor-pointer"
                             >
                                 {monthNames.map((month, index) => (
                                     <option key={index} value={index + 1}>
