@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download 10 Immagini Sbagliate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 { color: #2d5016; }
+        .instructions {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ffc107;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+        .image-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            border: 2px solid #e0e0e0;
+            cursor: pointer;
+        }
+        .image-card img:hover { border-color: #2d5016; }
+        .image-card h3 {
+            margin: 0 0 8px 0;
+            color: #333;
+            font-size: 18px;
+        }
+        .filename {
+            background: #f0f0f0;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+            margin: 8px 0;
+            color: #d63384;
+        }
+        .download-btn {
+            display: block;
+            background: #2d5016;
+            color: white;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 8px;
+        }
+        .download-btn:hover { background: #3d6020; }
+        .alt-btn {
+            display: inline-block;
+            background: #6c757d;
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 12px;
+            margin: 4px 2px;
+        }
+        .alt-btn:hover { background: #5a6268; }
+    </style>
+</head>
+<body>
+    <h1>🥗 Download 11 Immagini Mancanti/Sbagliate</h1>
+
+    <div class="instructions">
+        <h2>⚠️ Queste 11 immagini sono mancanti o hanno contenuto errato:</h2>
+        <p><strong>Prodotti da correggere:</strong> asparagi, carciofi, fagiolini, fichi, finocchi, melone, peperoni, radicchio, spinaci, zucca, zucchine</p>
+        <p><strong>Procedura:</strong></p>
+        <ol>
+            <li>Clicca sull'immagine o sul pulsante "📥 Download" per ciascun prodotto</li>
+            <li>Salva il file con il nome esatto mostrato (es: <code>asparagi.jpg</code>)</li>
+            <li>Sposta tutti i file in: <code>public/images/products/</code></li>
+            <li>Se un'immagine non ti convince, prova i link alternativi</li>
+        </ol>
+    </div>
+
+    <div class="image-grid">
+        <!-- Asparagi -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/5677862/pexels-photo-5677862.jpeg?auto=compress&cs=tinysrgb&w=500" download="asparagi.jpg">
+                <img src="https://images.pexels.com/photos/5677862/pexels-photo-5677862.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Asparagi">
+            </a>
+            <h3>🌱 Asparagi</h3>
+            <div class="filename">asparagi.jpg</div>
+            <a href="https://images.pexels.com/photos/5677862/pexels-photo-5677862.jpeg?auto=compress&cs=tinysrgb&w=500" download="asparagi.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/2255924/pexels-photo-2255924.jpeg?w=500" download="asparagi.jpg" class="alt-btn">Alt 1</a>
+            <a href="https://images.pexels.com/photos/4113905/pexels-photo-4113905.jpeg?w=500" download="asparagi.jpg" class="alt-btn">Alt 2</a>
+        </div>
+
+        <!-- Carciofi -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/8844288/pexels-photo-8844288.jpeg?auto=compress&cs=tinysrgb&w=500" download="carciofi.jpg">
+                <img src="https://images.pexels.com/photos/8844288/pexels-photo-8844288.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Carciofi">
+            </a>
+            <h3>🌼 Carciofi</h3>
+            <div class="filename">carciofi.jpg</div>
+            <a href="https://images.pexels.com/photos/8844288/pexels-photo-8844288.jpeg?auto=compress&cs=tinysrgb&w=500" download="carciofi.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/7456990/pexels-photo-7456990.jpeg?w=500" download="carciofi.jpg" class="alt-btn">Alt 1</a>
+        </div>
+
+        <!-- Fagiolini -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/7456983/pexels-photo-7456983.jpeg?auto=compress&cs=tinysrgb&w=500" download="fagiolini.jpg">
+                <img src="https://images.pexels.com/photos/7456983/pexels-photo-7456983.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fagiolini">
+            </a>
+            <h3>🫘 Fagiolini</h3>
+            <div class="filename">fagiolini.jpg</div>
+            <a href="https://images.pexels.com/photos/7456983/pexels-photo-7456983.jpeg?auto=compress&cs=tinysrgb&w=500" download="fagiolini.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?w=500" download="fagiolini.jpg" class="alt-btn">Alt 1</a>
+        </div>
+
+        <!-- Fichi -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/5966630/pexels-photo-5966630.jpeg?auto=compress&cs=tinysrgb&w=500" download="fichi.jpg">
+                <img src="https://images.pexels.com/photos/5966630/pexels-photo-5966630.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fichi">
+            </a>
+            <h3>🍇 Fichi</h3>
+            <div class="filename">fichi.jpg</div>
+            <a href="https://images.pexels.com/photos/5966630/pexels-photo-5966630.jpeg?auto=compress&cs=tinysrgb&w=500" download="fichi.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/4033018/pexels-photo-4033018.jpeg?w=500" download="fichi.jpg" class="alt-btn">Alt 1</a>
+        </div>
+
+        <!-- Finocchi -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/7456982/pexels-photo-7456982.jpeg?auto=compress&cs=tinysrgb&w=500" download="finocchi.jpg">
+                <img src="https://images.pexels.com/photos/7456982/pexels-photo-7456982.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Finocchi">
+            </a>
+            <h3>🌿 Finocchi</h3>
+            <div class="filename">finocchi.jpg</div>
+            <a href="https://images.pexels.com/photos/7456982/pexels-photo-7456982.jpeg?auto=compress&cs=tinysrgb&w=500" download="finocchi.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/6157658/pexels-photo-6157658.jpeg?w=500" download="finocchi.jpg" class="alt-btn">Alt 1</a>
+        </div>
+
+        <!-- Melone -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/5966466/pexels-photo-5966466.jpeg?auto=compress&cs=tinysrgb&w=500" download="melone.jpg">
+                <img src="https://images.pexels.com/photos/5966466/pexels-photo-5966466.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Melone">
+            </a>
+            <h3>🍈 Melone</h3>
+            <div class="filename">melone.jpg</div>
+            <a href="https://images.pexels.com/photos/5966466/pexels-photo-5966466.jpeg?auto=compress&cs=tinysrgb&w=500" download="melone.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/2363347/pexels-photo-2363347.jpeg?w=500" download="melone.jpg" class="alt-btn">Alt 1</a>
+        </div>
+
+        <!-- Peperoni -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/3872425/pexels-photo-3872425.jpeg?auto=compress&cs=tinysrgb&w=500" download="peperoni.jpg">
+                <img src="https://images.pexels.com/photos/3872425/pexels-photo-3872425.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Peperoni">
+            </a>
+            <h3>🌶️ Peperoni</h3>
+            <div class="filename">peperoni.jpg</div>
+            <a href="https://images.pexels.com/photos/3872425/pexels-photo-3872425.jpeg?auto=compress&cs=tinysrgb&w=500" download="peperoni.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/1271918/pexels-photo-1271918.jpeg?w=500" download="peperoni.jpg" class="alt-btn">Alt 1</a>
+            <a href="https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?w=500" download="peperoni.jpg" class="alt-btn">Alt 2</a>
+        </div>
+
+        <!-- Radicchio -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/6157641/pexels-photo-6157641.jpeg?auto=compress&cs=tinysrgb&w=500" download="radicchio.jpg">
+                <img src="https://images.pexels.com/photos/6157641/pexels-photo-6157641.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Radicchio">
+            </a>
+            <h3>🥬 Radicchio</h3>
+            <div class="filename">radicchio.jpg</div>
+            <a href="https://images.pexels.com/photos/6157641/pexels-photo-6157641.jpeg?auto=compress&cs=tinysrgb&w=500" download="radicchio.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/7763674/pexels-photo-7763674.jpeg?w=500" download="radicchio.jpg" class="alt-btn">Alt 1</a>
+        </div>
+
+        <!-- Spinaci -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/2325843/pexels-photo-2325843.jpeg?auto=compress&cs=tinysrgb&w=500" download="spinaci.jpg">
+                <img src="https://images.pexels.com/photos/2325843/pexels-photo-2325843.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Spinaci">
+            </a>
+            <h3>🥬 Spinaci</h3>
+            <div class="filename">spinaci.jpg</div>
+            <a href="https://images.pexels.com/photos/2325843/pexels-photo-2325843.jpeg?auto=compress&cs=tinysrgb&w=500" download="spinaci.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/1656663/pexels-photo-1656663.jpeg?w=500" download="spinaci.jpg" class="alt-btn">Alt 1</a>
+            <a href="https://images.pexels.com/photos/2255935/pexels-photo-2255935.jpeg?w=500" download="spinaci.jpg" class="alt-btn">Alt 2</a>
+        </div>
+
+        <!-- Zucca -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/1482101/pexels-photo-1482101.jpeg?auto=compress&cs=tinysrgb&w=500" download="zucca.jpg">
+                <img src="https://images.pexels.com/photos/1482101/pexels-photo-1482101.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Zucca">
+            </a>
+            <h3>🎃 Zucca</h3>
+            <div class="filename">zucca.jpg</div>
+            <a href="https://images.pexels.com/photos/1482101/pexels-photo-1482101.jpeg?auto=compress&cs=tinysrgb&w=500" download="zucca.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/1305063/pexels-photo-1305063.jpeg?w=500" download="zucca.jpg" class="alt-btn">Alt 1</a>
+            <a href="https://images.pexels.com/photos/1656666/pexels-photo-1656666.jpeg?w=500" download="zucca.jpg" class="alt-btn">Alt 2</a>
+        </div>
+
+        <!-- Zucchine -->
+        <div class="image-card">
+            <a href="https://images.pexels.com/photos/6157047/pexels-photo-6157047.jpeg?auto=compress&cs=tinysrgb&w=500" download="zucchine.jpg">
+                <img src="https://images.pexels.com/photos/6157047/pexels-photo-6157047.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Zucchine">
+            </a>
+            <h3>🥒 Zucchine</h3>
+            <div class="filename">zucchine.jpg</div>
+            <a href="https://images.pexels.com/photos/6157047/pexels-photo-6157047.jpeg?auto=compress&cs=tinysrgb&w=500" download="zucchine.jpg" class="download-btn">📥 Download</a>
+            <a href="https://images.pexels.com/photos/2518078/pexels-photo-2518078.jpeg?w=500" download="zucchine.jpg" class="alt-btn">Alt 1</a>
+            <a href="https://images.pexels.com/photos/8844429/pexels-photo-8844429.jpeg?w=500" download="zucchine.jpg" class="alt-btn">Alt 2</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; padding: 20px; background: white; border-radius: 8px;">
+        <h3>✅ Dopo aver scaricato tutte le 11 immagini:</h3>
+        <ol>
+            <li>Metti tutti i file in: <code>public/images/products/</code></li>
+            <li>Verifica: <code>./check-images.sh</code></li>
+            <li>Reseed database: <code>php artisan migrate:fresh --seed</code></li>
+            <li>Avvia server: <code>php artisan serve</code></li>
+            <li>Controlla: <code>http://localhost:8000/products</code></li>
+        </ol>
+    </div>
+</body>
+</html>
