@@ -20,7 +20,13 @@ download_image() {
 
     echo -n "⬇️  Downloading $filename... "
 
-    if curl -L -s -f -o "$output" "$url"; then
+    # Aggiungi un user-agent e altri header per sembrare un browser
+    if curl -L -s -f \
+        -H "User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+        -H "Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8" \
+        -H "Accept-Language: it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7" \
+        -H "Referer: https://commons.wikimedia.org/" \
+        -o "$output" "$url"; then
         # Verifica che sia un'immagine valida
         if file "$output" | grep -q -E "image|JPEG|PNG"; then
             echo "✓ Success"
@@ -34,6 +40,9 @@ download_image() {
         echo "✗ Failed (download error)"
         failed=$((failed + 1))
     fi
+
+    # Pausa di 1 secondo tra i download per evitare rate limiting
+    sleep 1
 }
 
 # Frutta
