@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Product;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class ProductSeeder extends Seeder
 {
@@ -204,6 +205,9 @@ class ProductSeeder extends Seeder
         foreach ($products as $productData) {
             $months = $productData['months'];
             unset($productData['months']);
+
+            // Generate slug from product name
+            $productData['slug'] = Str::slug($productData['name']);
 
             $product = Product::create($productData);
 
