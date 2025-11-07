@@ -1,0 +1,367 @@
+[
+    {
+        "id": 1,
+        "name": "Arance",
+        "type": "frutta",
+        "description": "Le arance sono agrumi ricchi di vitamina C, perfetti per la stagione invernale. Ottime da consumare fresche o spremute.",
+        "image_url": "\/images\/products\/arance.jpg",
+        "slug": "arance",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            12
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Mele",
+        "type": "frutta",
+        "description": "Le mele sono frutti versatili, ricchi di fibre e antiossidanti. Disponibili in molte varietà, sono perfette per dolci e spuntini.",
+        "image_url": "\/images\/products\/mele.jpg",
+        "slug": "mele",
+        "seasonal_months": [
+            1,
+            2,
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Fragole",
+        "type": "frutta",
+        "description": "Le fragole sono frutti primaverili dolci e profumati, ricchi di vitamina C e antiossidanti. Perfette per macedonie e dolci.",
+        "image_url": "\/images\/products\/fragole.jpg",
+        "slug": "fragole",
+        "seasonal_months": [
+            4,
+            5,
+            6
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Ciliegie",
+        "type": "frutta",
+        "description": "Le ciliegie sono frutti estivi dolci e succosi, ricchi di antiossidanti. Ottime da consumare fresche o per preparare marmellate.",
+        "image_url": "\/images\/products\/ciliegie.jpg",
+        "slug": "ciliegie",
+        "seasonal_months": [
+            5,
+            6,
+            7
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Pesche",
+        "type": "frutta",
+        "description": "Le pesche sono frutti estivi succosi e profumati, ricchi di vitamine A e C. Perfette per macedonie e dolci.",
+        "image_url": "\/images\/products\/pesche.jpg",
+        "slug": "pesche",
+        "seasonal_months": [
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Albicocche",
+        "type": "frutta",
+        "description": "Le albicocche sono frutti estivi dolci e vellutati, ricchi di vitamina A e potassio. Ottime fresche o essiccate.",
+        "image_url": "\/images\/products\/albicocche.jpg",
+        "slug": "albicocche",
+        "seasonal_months": [
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Uva",
+        "type": "frutta",
+        "description": "L'uva è un frutto autunnale dolce e succoso, ricco di antiossidanti. Perfetta da consumare fresca o per produrre vino.",
+        "image_url": "\/images\/products\/uva.jpg",
+        "slug": "uva",
+        "seasonal_months": [
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Pere",
+        "type": "frutta",
+        "description": "Le pere sono frutti autunnali dolci e succosi, ricchi di fibre e vitamine. Ottime da consumare fresche o cotte.",
+        "image_url": "\/images\/products\/pere.jpg",
+        "slug": "pere",
+        "seasonal_months": [
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Mandarini",
+        "type": "frutta",
+        "description": "I mandarini sono agrumi invernali dolci e facili da sbucciare, ricchi di vitamina C. Perfetti per uno spuntino veloce.",
+        "image_url": "\/images\/products\/mandarini.jpg",
+        "slug": "mandarini",
+        "seasonal_months": [
+            1,
+            2,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Melone",
+        "type": "frutta",
+        "description": "Il melone è un frutto estivo rinfrescante e dolce, ricco di acqua e vitamine. Perfetto per le giornate calde.",
+        "image_url": "\/images\/products\/melone.jpg",
+        "slug": "melone",
+        "seasonal_months": [
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Anguria",
+        "type": "frutta",
+        "description": "L'anguria è un frutto estivo molto rinfrescante, composto per il 90% di acqua. Perfetta per idratarsi durante l'estate.",
+        "image_url": "\/images\/products\/anguria.jpg",
+        "slug": "anguria",
+        "seasonal_months": [
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Fichi",
+        "type": "frutta",
+        "description": "I fichi sono frutti dolci e delicati della fine estate, ricchi di fibre e minerali. Ottimi freschi o secchi.",
+        "image_url": "\/images\/products\/fichi.jpg",
+        "slug": "fichi",
+        "seasonal_months": [
+            8,
+            9
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Pomodori",
+        "type": "verdura",
+        "description": "I pomodori sono ortaggi estivi versatili, ricchi di licopene e vitamine. Essenziali per la cucina italiana.",
+        "image_url": "\/images\/products\/pomodori.jpg",
+        "slug": "pomodori",
+        "seasonal_months": [
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Zucchine",
+        "type": "verdura",
+        "description": "Le zucchine sono ortaggi estivi leggeri e versatili, ricchi di acqua e poveri di calorie. Ottime grigliate o in padella.",
+        "image_url": "\/images\/products\/zucchine.jpg",
+        "slug": "zucchine",
+        "seasonal_months": [
+            5,
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Melanzane",
+        "type": "verdura",
+        "description": "Le melanzane sono ortaggi estivi versatili, ideali per la parmigiana e molti altri piatti mediterranei.",
+        "image_url": "\/images\/products\/melanzane.jpg",
+        "slug": "melanzane",
+        "seasonal_months": [
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Peperoni",
+        "type": "verdura",
+        "description": "I peperoni sono ortaggi estivi colorati e croccanti, ricchi di vitamina C. Ottimi crudi o cotti.",
+        "image_url": "\/images\/products\/peperoni.jpg",
+        "slug": "peperoni",
+        "seasonal_months": [
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Lattuga",
+        "type": "verdura",
+        "description": "La lattuga è una verdura a foglia verde, leggera e rinfrescante, disponibile quasi tutto l'anno. Ricca di vitamine e minerali, è la base perfetta per insalate fresche.",
+        "image_url": "\/images\/products\/lattuga.jpg",
+        "slug": "lattuga",
+        "seasonal_months": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Spinaci",
+        "type": "verdura",
+        "description": "Gli spinaci sono verdure a foglia verde ricche di ferro e vitamine. Ottimi cotti o crudi in insalata.",
+        "image_url": "\/images\/products\/spinaci.jpg",
+        "slug": "spinaci",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Cavolfiore",
+        "type": "verdura",
+        "description": "Il cavolfiore è un ortaggio invernale versatile, ricco di vitamine C e K. Ottimo gratinato o in zuppe.",
+        "image_url": "\/images\/products\/cavolfiore.jpg",
+        "slug": "cavolfiore",
+        "seasonal_months": [
+            1,
+            2,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Broccoli",
+        "type": "verdura",
+        "description": "I broccoli sono ortaggi invernali ricchi di vitamine e antiossidanti. Ottimi al vapore o saltati in padella.",
+        "image_url": "\/images\/products\/broccoli.jpg",
+        "slug": "broccoli",
+        "seasonal_months": [
+            1,
+            2,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Carciofi",
+        "type": "verdura",
+        "description": "I carciofi sono ortaggi primaverili dal sapore delicato, ricchi di fibre e antiossidanti. Ottimi alla romana o fritti.",
+        "image_url": "\/images\/products\/carciofi.jpg",
+        "slug": "carciofi",
+        "seasonal_months": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Asparagi",
+        "type": "verdura",
+        "description": "Gli asparagi sono ortaggi primaverili dal sapore delicato, ricchi di vitamine e minerali. Ottimi al vapore o grigliati.",
+        "image_url": "\/images\/products\/asparagi.jpg",
+        "slug": "asparagi",
+        "seasonal_months": [
+            3,
+            4,
+            5
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Fagiolini",
+        "type": "verdura",
+        "description": "I fagiolini sono legumi estivi teneri e croccanti, ricchi di fibre e vitamine. Ottimi lessati o saltati.",
+        "image_url": "\/images\/products\/fagiolini.jpg",
+        "slug": "fagiolini",
+        "seasonal_months": [
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Zucca",
+        "type": "verdura",
+        "description": "La zucca è un ortaggio autunnale dolce e versatile, ricco di betacarotene. Ottima per risotti, zuppe e dolci.",
+        "image_url": "\/images\/products\/zucca.jpg",
+        "slug": "zucca",
+        "seasonal_months": [
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Radicchio",
+        "type": "verdura",
+        "description": "Il radicchio è una verdura invernale dal sapore amarognolo, ricca di antiossidanti. Ottimo crudo o grigliato.",
+        "image_url": "\/images\/products\/radicchio.jpg",
+        "slug": "radicchio",
+        "seasonal_months": [
+            1,
+            2,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Finocchi",
+        "type": "verdura",
+        "description": "I finocchi sono ortaggi invernali croccanti e aromatici, ottimi per la digestione. Perfetti crudi in insalata o gratinati.",
+        "image_url": "\/images\/products\/finocchi.jpg",
+        "slug": "finocchi",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            10,
+            11,
+            12
+        ]
+    }
+]
