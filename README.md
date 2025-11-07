@@ -1,34 +1,33 @@
 # 🍃 Di Stagione - Catalogo Frutta e Verdura di Stagione in Italia
 
-Una web app moderna per scoprire e catalogare tutta la frutta e verdura di stagione in Italia, costruita con Laravel, React, Inertia.js, Tailwind CSS e Shadcn UI.
+Una web app statica moderna per scoprire e catalogare tutta la frutta e verdura di stagione in Italia, costruita con React, React Router, Tailwind CSS e Shadcn UI.
 
 ## ✨ Caratteristiche
 
+- ⚡ **App statica ultra-veloce**: Nessun backend, caricamento istantaneo, hosting gratuito
 - 📅 **Visualizzazione per mese**: Scopri quali prodotti sono di stagione in ogni mese dell'anno
 - 🌸 **Filtri per stagione**: Naviga i prodotti per primavera, estate, autunno e inverno
 - 🔍 **Ricerca prodotti**: Cerca facilmente qualsiasi frutto o verdura
 - 🍎 **Filtri per tipo**: Filtra tra frutta e verdura
 - 📱 **Design responsivo**: Interfaccia moderna e mobile-friendly
-- 🖼️ **Immagini dei prodotti**: Ogni prodotto ha un'immagine rappresentativa
+- 🖼️ **Immagini AI**: Immagini generate con Bing AI per qualità uniforme
 - 📖 **Pagine di dettaglio**: Informazioni complete su ogni prodotto con descrizione e periodo di stagionalità
 
 ## 🛠️ Tecnologie Utilizzate
 
-- **Backend**: Laravel 12
 - **Frontend**: React 18
-- **UI Framework**: Tailwind CSS
+- **Router**: React Router DOM
+- **Build Tool**: Vite
+- **UI Framework**: Tailwind CSS 4
 - **Componenti UI**: Shadcn UI
-- **Router**: Inertia.js
-- **Database**: PostgreSQL/MySQL/SQLite
 - **Icone**: Lucide React
+- **Deployment**: Netlify
+- **Dati**: JSON statico
 
 ## 📋 Prerequisiti
 
-- PHP >= 8.2
-- Composer
 - Node.js >= 18
-- NPM o Yarn
-- Database (PostgreSQL, MySQL o SQLite)
+- NPM (o Yarn)
 
 ## 🚀 Installazione
 
@@ -38,99 +37,57 @@ git clone <repository-url>
 cd di-stagione
 ```
 
-2. **Installa le dipendenze PHP**
-```bash
-composer install
-```
-
-3. **Installa le dipendenze Node**
+2. **Installa le dipendenze**
 ```bash
 npm install
 ```
 
-4. **Configura l'ambiente**
-```bash
-cp .env.example .env
-php artisan key:generate
-```
-
-5. **Configura il database**
-
-Modifica il file `.env` con le tue credenziali database:
-
-Per PostgreSQL:
-```env
-DB_CONNECTION=pgsql
-DB_HOST=127.0.0.1
-DB_PORT=5432
-DB_DATABASE=di_stagione
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
-```
-
-Per MySQL:
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=di_stagione
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
-```
-
-6. **Esegui le migrations e i seeders**
-```bash
-php artisan migrate
-php artisan db:seed
-```
-
-Questo popolerà il database con oltre 25 prodotti stagionali italiani!
-
-7. **Compila gli asset frontend**
-
-Per development:
+3. **Avvia il server di sviluppo**
 ```bash
 npm run dev
 ```
 
-Per production:
+L'applicazione sarà disponibile su `http://localhost:5173`
+
+4. **Build per produzione**
 ```bash
 npm run build
 ```
 
-8. **Avvia il server**
-```bash
-php artisan serve
-```
+I file ottimizzati saranno generati nella cartella `dist/`
 
-L'applicazione sarà disponibile su `http://localhost:8000`
+5. **Anteprima della build di produzione**
+```bash
+npm run preview
+```
 
 ## 📁 Struttura del Progetto
 
 ```
 di-stagione/
-├── app/
-│   ├── Http/Controllers/
-│   │   └── ProductController.php    # Controller per la gestione dei prodotti
-│   └── Models/
-│       └── Product.php               # Model del prodotto
-├── database/
-│   ├── migrations/                   # Migrations del database
-│   └── seeders/
-│       └── ProductSeeder.php         # Seeder con prodotti stagionali
-├── resources/
-│   ├── css/
-│   │   └── app.css                   # Stili Tailwind e Shadcn
-│   └── js/
-│       ├── components/ui/            # Componenti Shadcn UI
-│       ├── lib/
-│       │   └── utils.js              # Utility functions
-│       └── Pages/
-│           └── Products/
-│               ├── Index.jsx         # Pagina principale
-│               └── Show.jsx          # Pagina dettaglio prodotto
-└── routes/
-    └── web.php                       # Routes dell'applicazione
+├── public/
+│   ├── data/
+│   │   └── products.json             # Dati prodotti stagionali
+│   └── images/                       # Immagini prodotti (generate con Bing AI)
+├── src/
+│   ├── components/ui/                # Componenti Shadcn UI
+│   │   ├── badge.jsx
+│   │   ├── button.jsx
+│   │   ├── card.jsx
+│   │   └── input.jsx
+│   ├── hooks/
+│   │   └── useProducts.js            # Hook per gestione prodotti
+│   ├── lib/
+│   │   └── utils.js                  # Utility functions
+│   ├── pages/
+│   │   ├── ProductsIndex.jsx         # Pagina principale
+│   │   └── ProductShow.jsx           # Pagina dettaglio prodotto
+│   ├── index.css                     # Stili Tailwind
+│   └── main.jsx                      # Entry point React
+├── index.html                        # HTML template
+├── vite.config.js                    # Configurazione Vite
+├── tailwind.config.js                # Configurazione Tailwind
+└── netlify.toml                      # Configurazione Netlify
 ```
 
 ## 🎨 Componenti UI Shadcn Utilizzati
@@ -140,37 +97,66 @@ di-stagione/
 - **Input**: Input per la ricerca
 - **Badge**: Badge per categorie e stagioni
 
-## 📊 Database Schema
+## 📊 Struttura Dati
 
-### Tabella `products`
-- `id`: ID univoco
-- `name`: Nome del prodotto (es. "Pomodori")
-- `name_en`: Nome in inglese (opzionale)
-- `type`: Tipo (`frutta` o `verdura`)
-- `description`: Descrizione del prodotto
-- `image_url`: URL dell'immagine
+I dati dei prodotti sono memorizzati in un file JSON statico (`public/data/products.json`):
+
+```json
+{
+  "id": 1,
+  "name": "Pomodori",
+  "name_en": "Tomatoes",
+  "type": "verdura",
+  "description": "Descrizione del prodotto",
+  "image": "/images/pomodori.jpg",
+  "slug": "pomodori",
+  "months": [6, 7, 8, 9]
+}
+```
+
+### Campi:
+- `id`: ID univoco del prodotto
+- `name`: Nome in italiano
+- `name_en`: Nome in inglese
+- `type`: `frutta` o `verdura`
+- `description`: Descrizione dettagliata
+- `image`: Path dell'immagine (generata con Bing AI)
 - `slug`: Slug per URL SEO-friendly
+- `months`: Array dei mesi di stagionalità (1-12)
 
-### Tabella `month_product` (pivot)
-- `id`: ID univoco
-- `product_id`: Riferimento al prodotto
-- `month`: Numero del mese (1-12)
+## 🔗 Routes
 
-## 🔗 API Endpoints
-
-- `GET /`: Pagina principale con prodotti di stagione
-- `GET /prodotti/{slug}`: Pagina di dettaglio prodotto
-- `GET /api/products/month/{month}`: API per ottenere prodotti per mese
-- `GET /api/products/season/{season}`: API per ottenere prodotti per stagione
-- `GET /api/products/search?q={query}`: API per cercare prodotti
+- `/`: Pagina principale con tutti i prodotti stagionali
+- `/prodotti/{slug}`: Pagina di dettaglio del prodotto
 
 ## 🌱 Prodotti Inclusi
 
-Il seeder include una vasta gamma di prodotti stagionali italiani:
+Il catalogo include una vasta gamma di prodotti stagionali italiani:
 
 **Frutta**: Arance, Mele, Fragole, Ciliegie, Pesche, Albicocche, Uva, Pere, Mandarini, Melone, Anguria, Fichi
 
 **Verdura**: Pomodori, Zucchine, Melanzane, Peperoni, Lattuga, Spinaci, Cavolfiore, Broccoli, Carciofi, Asparagi, Fagiolini, Zucca, Radicchio, Finocchi
+
+## 🚀 Deployment
+
+L'applicazione è configurata per il deployment automatico su **Netlify**:
+
+1. Collega il repository GitHub a Netlify
+2. Le impostazioni di build sono già configurate in `netlify.toml`:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+   - Node version: 22
+
+3. Ogni push sul branch principale attiverà automaticamente una nuova build
+
+### Deploy manuale
+
+Puoi anche deployare manualmente:
+
+```bash
+npm run build
+netlify deploy --prod
+```
 
 ## 🎯 Funzionalità Future
 
@@ -200,4 +186,4 @@ Creato con ❤️ per promuovere il consumo di prodotti locali e stagionali in I
 
 ---
 
-**Nota**: Le immagini dei prodotti provengono da Wikimedia Commons, con licenza libera e URL permanenti. Le immagini sono stabili, affidabili e sempre disponibili.
+**Nota**: Le immagini dei prodotti sono state generate utilizzando Bing AI Image Creator per garantire coerenza visiva e qualità uniforme in tutto il catalogo.
