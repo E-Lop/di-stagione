@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genera Immagini Rimanenti con AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1400px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 { color: #2d5016; }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        .hero h2 { margin: 0 0 10px 0; }
+        .instructions {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .step {
+            background: #e7f3ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border-left: 4px solid #0066cc;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .product-card h3 {
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 20px;
+        }
+        .filename {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 13px;
+            margin: 10px 0;
+            color: #d63384;
+            font-weight: bold;
+        }
+        .prompt-box {
+            background: #f8f9fa;
+            border: 2px dashed #6c757d;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            position: relative;
+        }
+        .prompt-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #6c757d;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .prompt-text {
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            user-select: all;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #2d5016;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .copy-btn:hover { background: #3d6020; }
+        .copy-btn:active { background: #1d4010; }
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: #d63384;
+        }
+        .category-header {
+            background: #2d5016;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 30px 0 20px 0;
+        }
+        .category-header h2 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🎨 Genera le Altre 15 Immagini con AI</h1>
+        <h2>Sostituisci le immagini esistenti per coerenza visiva!</h2>
+        <p>Genera le rimanenti 15 immagini (10 frutta + 5 verdura) con lo stesso stile delle 11 già create.</p>
+    </div>
+
+    <div class="instructions">
+        <h2>📋 Procedura Rapida:</h2>
+        <div class="step">
+            <strong>1.</strong> Usa <strong>Bing Image Creator</strong> (lo stesso che hai usato prima)
+        </div>
+        <div class="step">
+            <strong>2.</strong> Per ogni prodotto, clicca <strong>"📋 Copia"</strong> per copiare il prompt
+        </div>
+        <div class="step">
+            <strong>3.</strong> Incolla il prompt in Bing Image Creator e genera
+        </div>
+        <div class="step">
+            <strong>4.</strong> Scarica l'immagine e rinominala con il nome esatto mostrato
+        </div>
+        <div class="step">
+            <strong>5.</strong> Sostituisci il file in <code>public/images/products/</code>
+        </div>
+        <p style="margin-top: 15px;"><strong>💡 Suggerimento:</strong> Mantieni aperto Bing Image Creator e copia-incolla velocemente i prompt uno dopo l'altro!</p>
+    </div>
+
+    <div class="category-header">
+        <h2>🍊 Frutta (10 immagini)</h2>
+    </div>
+
+    <div class="product-grid">
+        <!-- Arance -->
+        <div class="product-card">
+            <h3>🍊 Arance</h3>
+            <div class="filename">Salva come: arance.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-arance')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-arance">Fresh oranges on white background, professional food photography, bright natural lighting, clean and simple composition, vibrant orange color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Mele -->
+        <div class="product-card">
+            <h3>🍎 Mele</h3>
+            <div class="filename">Salva come: mele.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-mele')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-mele">Fresh red apples on white background, professional food photography, bright natural lighting, clean and simple composition, vibrant red color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Fragole -->
+        <div class="product-card">
+            <h3>🍓 Fragole</h3>
+            <div class="filename">Salva come: fragole.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-fragole')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-fragole">Fresh strawberries on white background, professional food photography, bright natural lighting, clean and simple composition, vibrant red color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Ciliegie -->
+        <div class="product-card">
+            <h3>🍒 Ciliegie</h3>
+            <div class="filename">Salva come: ciliegie.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-ciliegie')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-ciliegie">Fresh cherries with stems on white background, professional food photography, bright natural lighting, clean and simple composition, deep red color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Pesche -->
+        <div class="product-card">
+            <h3>🍑 Pesche</h3>
+            <div class="filename">Salva come: pesche.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-pesche')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-pesche">Fresh peaches on white background, professional food photography, bright natural lighting, clean and simple composition, peachy orange color with red blush, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Albicocche -->
+        <div class="product-card">
+            <h3>🧡 Albicocche</h3>
+            <div class="filename">Salva come: albicocche.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-albicocche')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-albicocche">Fresh apricots on white background, professional food photography, bright natural lighting, clean and simple composition, golden orange color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Uva -->
+        <div class="product-card">
+            <h3>🍇 Uva</h3>
+            <div class="filename">Salva come: uva.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-uva')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-uva">Fresh grapes bunch on white background, professional food photography, bright natural lighting, clean and simple composition, purple and green grapes, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Pere -->
+        <div class="product-card">
+            <h3>🍐 Pere</h3>
+            <div class="filename">Salva come: pere.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-pere')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-pere">Fresh pears on white background, professional food photography, bright natural lighting, clean and simple composition, yellow-green color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Mandarini -->
+        <div class="product-card">
+            <h3>🍊 Mandarini</h3>
+            <div class="filename">Salva come: mandarini.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-mandarini')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-mandarini">Fresh mandarin oranges on white background, professional food photography, bright natural lighting, clean and simple composition, vibrant orange color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Anguria -->
+        <div class="product-card">
+            <h3>🍉 Anguria</h3>
+            <div class="filename">Salva come: anguria.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-anguria')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-anguria">Fresh watermelon whole and sliced showing red interior on white background, professional food photography, bright natural lighting, clean composition, high resolution</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="category-header">
+        <h2>🥬 Verdura (5 immagini)</h2>
+    </div>
+
+    <div class="product-grid">
+        <!-- Pomodori -->
+        <div class="product-card">
+            <h3>🍅 Pomodori</h3>
+            <div class="filename">Salva come: pomodori.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-pomodori')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-pomodori">Fresh tomatoes on white background, professional food photography, bright natural lighting, clean and simple composition, vibrant red color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Melanzane -->
+        <div class="product-card">
+            <h3>🍆 Melanzane</h3>
+            <div class="filename">Salva come: melanzane.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-melanzane')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-melanzane">Fresh eggplants (aubergines) on white background, professional food photography, bright natural lighting, clean and simple composition, deep purple color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Lattuga -->
+        <div class="product-card">
+            <h3>🥬 Lattuga</h3>
+            <div class="filename">Salva come: lattuga.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-lattuga')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-lattuga">Fresh lettuce head on white background, professional food photography, bright natural lighting, clean and simple composition, vibrant green color, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Cavolfiore -->
+        <div class="product-card">
+            <h3>🥦 Cavolfiore</h3>
+            <div class="filename">Salva come: cavolfiore.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-cavolfiore')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-cavolfiore">Fresh cauliflower head on white background, professional food photography, bright natural lighting, clean and simple composition, white florets, high resolution</div>
+            </div>
+        </div>
+
+        <!-- Broccoli -->
+        <div class="product-card">
+            <h3>🥦 Broccoli</h3>
+            <div class="filename">Salva come: broccoli.jpg</div>
+            <div class="prompt-box">
+                <button class="copy-btn" onclick="copyPrompt(this, 'prompt-broccoli')">📋 Copia</button>
+                <div class="prompt-label">Prompt AI:</div>
+                <div class="prompt-text" id="prompt-broccoli">Fresh broccoli head on white background, professional food photography, bright natural lighting, clean and simple composition, vibrant green color, high resolution</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; padding: 25px; background: #d4edda; border-radius: 8px; border-left: 4px solid #28a745;">
+        <h3>✅ Dopo aver generato e sostituito tutte le 15 immagini:</h3>
+        <ol style="line-height: 1.8;">
+            <li>Verifica che tutte le 26 immagini siano in <code>public/images/products/</code></li>
+            <li>Esegui: <code>./check-images.sh</code> (dovrebbe mostrare 26 immagini valide)</li>
+            <li>Aggiorna database: <code>php artisan migrate:fresh --seed</code></li>
+            <li>Avvia server: <code>php artisan serve</code></li>
+            <li>Controlla: <code>http://localhost:8000/products</code></li>
+        </ol>
+        <p style="margin-top: 15px;"><strong>🎉 Avrai finalmente tutte le immagini con uno stile coerente e professionale!</strong></p>
+    </div>
+
+    <div style="margin-top: 20px; padding: 20px; background: white; border-radius: 8px;">
+        <h3>💡 Suggerimenti:</h3>
+        <ul style="line-height: 1.8;">
+            <li><strong>Usa sempre Bing Image Creator</strong> per mantenere coerenza con le prime 11</li>
+            <li>Genera tutte le immagini nella stessa sessione per uno stile uniforme</li>
+            <li>Se un'immagine non ti convince, rigenera con lo stesso prompt</li>
+            <li>Lo sfondo bianco renderà il sito molto pulito e professionale</li>
+            <li>Puoi aggiungere varianti come "one cut in half" per mostrare l'interno del frutto</li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 20px; padding: 20px; background: #fff3cd; border-radius: 8px; border-left: 4px solid #ffc107;">
+        <h3>⚡ Link Rapido:</h3>
+        <p style="margin: 10px 0;"><a href="https://www.bing.com/images/create" target="_blank" style="color: #2d5016; font-weight: bold; font-size: 18px;">🔗 Apri Bing Image Creator</a></p>
+    </div>
+
+    <script>
+        function copyPrompt(button, promptId) {
+            const promptText = document.getElementById(promptId).textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                const originalText = button.textContent;
+                button.textContent = '✅ Copiato!';
+                button.style.background = '#28a745';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#2d5016';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
