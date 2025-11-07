@@ -43,8 +43,8 @@ export default function ProductsIndex() {
                 return false;
             }
 
-            // Filter by month
-            if (!product.seasonal_months.includes(selectedMonth)) {
+            // Filter by month - only apply when there's no search term
+            if (!searchTerm && !product.seasonal_months.includes(selectedMonth)) {
                 return false;
             }
 
