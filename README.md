@@ -19,7 +19,7 @@ Una web app statica moderna per scoprire e catalogare tutta la frutta e verdura 
 - **Router**: React Router DOM
 - **Build Tool**: Vite
 - **UI Framework**: Tailwind CSS 4
-- **Componenti UI**: Shadcn UI
+- **Componenti UI**: Shadcn U
 - **Icone**: Lucide React
 - **Deployment**: Netlify
 - **Dati**: JSON statico

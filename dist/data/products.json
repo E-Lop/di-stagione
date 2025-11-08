@@ -363,5 +363,374 @@
             11,
             12
         ]
+    },
+    {
+        "id": 27,
+        "name": "Limoni",
+        "type": "frutta",
+        "description": "I limoni sono agrumi invernali ricchi di vitamina C, dal sapore acido e rinfrescante. Indispensabili in cucina per condimenti e bevande.",
+        "image_url": "\/images\/products\/limoni.jpg",
+        "slug": "limoni",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Pompelmi",
+        "type": "frutta",
+        "description": "I pompelmi sono agrumi invernali dal sapore dolce-amaro, ricchi di vitamina C e antiossidanti. Ottimi a colazione o in insalata.",
+        "image_url": "\/images\/products\/pompelmi.jpg",
+        "slug": "pompelmi",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Prugne",
+        "type": "frutta",
+        "description": "Le prugne sono frutti estivo-autunnali succosi e dolci, ricchi di fibre e antiossidanti. Ottime fresche o essiccate.",
+        "image_url": "\/images\/products\/prugne.jpg",
+        "slug": "prugne",
+        "seasonal_months": [
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Kiwi",
+        "type": "frutta",
+        "description": "I kiwi sono frutti autunnali-invernali ricchi di vitamina C, dal sapore dolce-acidulo. Perfetti per uno spuntino energetico.",
+        "image_url": "\/images\/products\/kiwi.jpg",
+        "slug": "kiwi",
+        "seasonal_months": [
+            1,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Cachi",
+        "type": "frutta",
+        "description": "I cachi sono frutti autunnali dolcissimi e morbidi, ricchi di betacarotene e zuccheri naturali. Tipici della stagione fredda.",
+        "image_url": "\/images\/products\/cachi.jpg",
+        "slug": "cachi",
+        "seasonal_months": [
+            10,
+            11
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Nespole",
+        "type": "frutta",
+        "description": "Le nespole sono frutti primaverili-estivi dal sapore delicato, ricchi di vitamine e minerali. Ottime fresche e dissetanti.",
+        "image_url": "\/images\/products\/nespole.jpg",
+        "slug": "nespole",
+        "seasonal_months": [
+            5,
+            6
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Susine",
+        "type": "frutta",
+        "description": "Le susine sono frutti estivi succosi e dolci, ricchi di vitamine e fibre. Perfette fresche o per confetture.",
+        "image_url": "\/images\/products\/susine.jpg",
+        "slug": "susine",
+        "seasonal_months": [
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Lamponi",
+        "type": "frutta",
+        "description": "I lamponi sono frutti di bosco estivi delicati e profumati, ricchi di antiossidanti. Ottimi freschi o per dolci e marmellate.",
+        "image_url": "\/images\/products\/lamponi.jpg",
+        "slug": "lamponi",
+        "seasonal_months": [
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Mirtilli",
+        "type": "frutta",
+        "description": "I mirtilli sono frutti di bosco estivi ricchissimi di antiossidanti, dal sapore dolce-acidulo. Perfetti per smoothie e dolci.",
+        "image_url": "\/images\/products\/mirtilli.jpg",
+        "slug": "mirtilli",
+        "seasonal_months": [
+            6,
+            7,
+            8
+        ]
+    },
+    {
+        "id": 36,
+        "name": "More",
+        "type": "frutta",
+        "description": "Le more sono frutti di bosco estivo-autunnali dal sapore intenso, ricchi di vitamine e antiossidanti. Ottime fresche o in marmellata.",
+        "image_url": "\/images\/products\/more.jpg",
+        "slug": "more",
+        "seasonal_months": [
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Castagne",
+        "type": "frutta",
+        "description": "Le castagne sono frutti secchi autunnali nutrienti e saporiti, ricchi di carboidrati complessi. Ottime arrostite o bollite.",
+        "image_url": "\/images\/products\/castagne.jpg",
+        "slug": "castagne",
+        "seasonal_months": [
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Cetrioli",
+        "type": "verdura",
+        "description": "I cetrioli sono ortaggi estivi rinfrescanti e croccanti, composti per il 95% di acqua. Perfetti crudi in insalata.",
+        "image_url": "\/images\/products\/cetrioli.jpg",
+        "slug": "cetrioli",
+        "seasonal_months": [
+            5,
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Carote",
+        "type": "verdura",
+        "description": "Le carote sono ortaggi versatili disponibili tutto l'anno, ricche di betacarotene. Ottime crude, cotte o centrifugate.",
+        "image_url": "\/images\/products\/carote.jpg",
+        "slug": "carote",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Cipolle",
+        "type": "verdura",
+        "description": "Le cipolle sono ortaggi estivo-autunnali fondamentali in cucina, ricche di proprietà benefiche. Base di moltissime ricette.",
+        "image_url": "\/images\/products\/cipolle.jpg",
+        "slug": "cipolle",
+        "seasonal_months": [
+            5,
+            6,
+            7,
+            8,
+            9
+        ]
+    },
+    {
+        "id": 41,
+        "name": "Patate",
+        "type": "verdura",
+        "description": "Le patate sono tuberi estivo-autunnali versatili e nutrienti, ricche di carboidrati e potassio. Alla base di innumerevoli preparazioni.",
+        "image_url": "\/images\/products\/patate.jpg",
+        "slug": "patate",
+        "seasonal_months": [
+            7,
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "id": 42,
+        "name": "Bietole",
+        "type": "verdura",
+        "description": "Le bietole sono verdure a foglia autunnali-primaverili ricche di ferro e vitamine. Ottime saltate in padella o in torte salate.",
+        "image_url": "\/images\/products\/bietole.jpg",
+        "slug": "bietole",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Cavolo",
+        "type": "verdura",
+        "description": "Il cavolo è un ortaggio invernale resistente al freddo, ricco di vitamine C e K. Ottimo per zuppe e piatti rustici.",
+        "image_url": "\/images\/products\/cavolo.jpg",
+        "slug": "cavolo",
+        "seasonal_months": [
+            1,
+            2,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Cavoletti di Bruxelles",
+        "type": "verdura",
+        "description": "I cavoletti di Bruxelles sono ortaggi autunnali-invernali dal sapore intenso, ricchi di antiossidanti. Ottimi arrostiti o saltati.",
+        "image_url": "\/images\/products\/cavoletti-di-bruxelles.jpg",
+        "slug": "cavoletti-di-bruxelles",
+        "seasonal_months": [
+            1,
+            2,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Porri",
+        "type": "verdura",
+        "description": "I porri sono ortaggi autunnali-primaverili dal sapore delicato, ricchi di vitamine e minerali. Ottimi per zuppe e sformati.",
+        "image_url": "\/images\/products\/porri.jpg",
+        "slug": "porri",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            4,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Rape",
+        "type": "verdura",
+        "description": "Le rape sono ortaggi autunnali-invernali dal sapore caratteristico, ricche di vitamine e minerali. Ottime in zuppe e contorni.",
+        "image_url": "\/images\/products\/rape.jpg",
+        "slug": "rape",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Sedano",
+        "type": "verdura",
+        "description": "Il sedano è un ortaggio autunnale-primaverile aromatico e croccante, ottimo per la digestione. Base di molti soffritti e zuppe.",
+        "image_url": "\/images\/products\/sedano.jpg",
+        "slug": "sedano",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            4,
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Rucola",
+        "type": "verdura",
+        "description": "La rucola è una verdura a foglia dal sapore piccante, disponibile quasi tutto l'anno. Ricca di vitamine, perfetta per insalate.",
+        "image_url": "\/images\/products\/rucola.jpg",
+        "slug": "rucola",
+        "seasonal_months": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Barbabietole",
+        "type": "verdura",
+        "description": "Le barbabietole sono ortaggi autunnali-invernali dal colore intenso, ricche di antiossidanti. Ottime crude, cotte o in insalata.",
+        "image_url": "\/images\/products\/barbabietole.jpg",
+        "slug": "barbabietole",
+        "seasonal_months": [
+            1,
+            2,
+            3,
+            9,
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "id": 50,
+        "name": "Piselli",
+        "type": "verdura",
+        "description": "I piselli sono legumi primaverili dolci e teneri, ricchi di proteine vegetali e fibre. Ottimi freschi o per risotti e contorni.",
+        "image_url": "\/images\/products\/piselli.jpg",
+        "slug": "piselli",
+        "seasonal_months": [
+            4,
+            5,
+            6
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Fave",
+        "type": "verdura",
+        "description": "Le fave sono legumi primaverili dal sapore delicato, ricche di proteine e fibre. Ottime crude con pecorino o cotte in zuppe.",
+        "image_url": "\/images\/products\/fave.jpg",
+        "slug": "fave",
+        "seasonal_months": [
+            4,
+            5,
+            6
+        ]
     }
 ]
