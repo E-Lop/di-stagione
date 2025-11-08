@@ -1,24 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-.env
-.env.backup
-.env.production
-.phpactor.json
-.phpunit.result.cache
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 /.fleet
-/.idea
 /.nova
-/.phpunit.cache
-/.vscode
 /.zed
-/auth.json
-/node_modules
-/public/build
-/public/hot
-/public/storage
-/storage/*.key
-/storage/pail
-/vendor
-Homestead.json
-Homestead.yaml
+
+# OS
 Thumbs.db
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Netlify
+.netlify

@@ -1,17 +1,19 @@
 # 🍃 Di Stagione - Catalogo Frutta e Verdura di Stagione in Italia
 
-Una web app statica moderna per scoprire e catalogare tutta la frutta e verdura di stagione in Italia, costruita con React, React Router, Tailwind CSS e Shadcn UI.
+Una web app statica moderna per scoprire e catalogare tutta la frutta e verdura di stagione in Italia, costruita con React, React Router, Tailwind CSS e Shadcn UI. Ottimizzata per il deploy su Netlify.
 
 ## ✨ Caratteristiche
 
-- ⚡ **App statica ultra-veloce**: Nessun backend, caricamento istantaneo, hosting gratuito
+- ⚡ **App statica ultra-veloce**: Nessun backend, caricamento istantaneo, hosting gratuito su Netlify
+- 🔎 **Autocomplete intelligente**: Ricerca con suggerimenti in tempo reale mentre digiti
 - 📅 **Visualizzazione per mese**: Scopri quali prodotti sono di stagione in ogni mese dell'anno
 - 🌸 **Filtri per stagione**: Naviga i prodotti per primavera, estate, autunno e inverno
-- 🔍 **Ricerca prodotti**: Cerca facilmente qualsiasi frutto o verdura
+- 🔍 **Ricerca avanzata**: Cerca facilmente qualsiasi frutto o verdura con navigazione da tastiera
 - 🍎 **Filtri per tipo**: Filtra tra frutta e verdura
 - 📱 **Design responsivo**: Interfaccia moderna e mobile-friendly
 - 🖼️ **Immagini AI**: Immagini generate con Bing AI per qualità uniforme
 - 📖 **Pagine di dettaglio**: Informazioni complete su ogni prodotto con descrizione e periodo di stagionalità
+- ⌨️ **Navigazione da tastiera**: Supporto completo per frecce, Enter ed Esc nell'autocomplete
 
 ## 🛠️ Tecnologie Utilizzate
 
@@ -26,7 +28,7 @@ Una web app statica moderna per scoprire e catalogare tutta la frutta e verdura 
 
 ## 📋 Prerequisiti
 
-- Node.js >= 18
+- Node.js >= 20.19 (raccomandato per Vite 7)
 - NPM (o Yarn)
 
 ## 🚀 Installazione
@@ -71,6 +73,7 @@ di-stagione/
 │   └── images/                       # Immagini prodotti (generate con Bing AI)
 ├── src/
 │   ├── components/ui/                # Componenti Shadcn UI
+│   │   ├── autocomplete.jsx          # Autocomplete con suggerimenti
 │   │   ├── badge.jsx
 │   │   ├── button.jsx
 │   │   ├── card.jsx
@@ -80,18 +83,24 @@ di-stagione/
 │   ├── lib/
 │   │   └── utils.js                  # Utility functions
 │   ├── pages/
-│   │   ├── ProductsIndex.jsx         # Pagina principale
+│   │   ├── ProductsIndex.jsx         # Pagina principale con autocomplete
 │   │   └── ProductShow.jsx           # Pagina dettaglio prodotto
 │   ├── index.css                     # Stili Tailwind
 │   └── main.jsx                      # Entry point React
 ├── index.html                        # HTML template
 ├── vite.config.js                    # Configurazione Vite
 ├── tailwind.config.js                # Configurazione Tailwind
-└── netlify.toml                      # Configurazione Netlify
+├── netlify.toml                      # Configurazione Netlify
+└── package.json                      # Dipendenze del progetto
 ```
 
-## 🎨 Componenti UI Shadcn Utilizzati
+## 🎨 Componenti UI Utilizzati
 
+- **Autocomplete**: Componente custom per ricerca con suggerimenti in tempo reale
+  - Filtro client-side per massime performance
+  - Navigazione da tastiera (frecce, Enter, Esc)
+  - Visualizzazione immagini e dettagli prodotto
+  - Limite minimo 2 caratteri, massimo 10 suggerimenti
 - **Button**: Pulsanti con varianti multiple
 - **Card**: Card per visualizzare i prodotti
 - **Input**: Input per la ricerca
