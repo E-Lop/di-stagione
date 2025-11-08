@@ -1,4 +1,4 @@
-import { Head, Link } from '@inertiajs/react';
+import { Head, Link, router } from '@inertiajs/react';
 import { ArrowLeft, Calendar, Apple, Carrot } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -123,7 +123,8 @@ export default function Show({ product }) {
                                                 <Badge
                                                     key={month}
                                                     variant="outline"
-                                                    className={seasonInfo.color}
+                                                    className={`${seasonInfo.color} cursor-pointer hover:opacity-80 transition-opacity`}
+                                                    onClick={() => router.get('/', { month })}
                                                 >
                                                     {monthNames[month - 1]}
                                                 </Badge>
