@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Calendar, Apple, Carrot } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
@@ -8,6 +8,7 @@ import { useProduct } from '../hooks/useProducts';
 
 export default function ProductShow() {
     const { slug } = useParams();
+    const navigate = useNavigate();
     const { product, loading } = useProduct(slug);
 
     const monthNames = [
@@ -149,7 +150,8 @@ export default function ProductShow() {
                                                 <Badge
                                                     key={month}
                                                     variant="outline"
-                                                    className={seasonInfo.color}
+                                                    className={`${seasonInfo.color} cursor-pointer hover:opacity-80 transition-opacity`}
+                                                    onClick={() => navigate(`/?month=${month}`)}
                                                 >
                                                     {monthNames[month - 1]}
                                                 </Badge>
