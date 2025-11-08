@@ -1,6 +1,13 @@
 # Dependencies
 node_modules/
 
+# Laravel (unused directories that may be recreated by background processes)
+bootstrap/
+database/
+storage/
+vendor/
+composer.lock
+
 # Build output
 dist/
 
