@@ -58,46 +58,36 @@ export default function ProductShow() {
                 {/* Header */}
                 <header className="bg-white shadow-sm border-b">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                        <Link to="/">
-                            <Button variant="ghost" className="gap-2 mb-4">
-                                <ArrowLeft className="h-4 w-4" />
-                                Torna ai prodotti
-                            </Button>
-                        </Link>
-                        <div className="flex items-start gap-4">
-                            <div className="flex-1">
-                                <h1 className="text-4xl font-bold text-gray-900">
-                                    {product.name}
-                                </h1>
-                                <div className="flex gap-2 mt-3">
-                                    <Badge
-                                        variant={product.type === 'frutta' ? 'default' : 'secondary'}
-                                        className="text-sm"
-                                    >
-                                        {product.type === 'frutta' ? (
-                                            <>
-                                                <Apple className="h-4 w-4 mr-1" />
-                                                Frutta
-                                            </>
-                                        ) : (
-                                            <>
-                                                <Carrot className="h-4 w-4 mr-1" />
-                                                Verdura
-                                            </>
-                                        )}
+                        <h1 className="text-4xl font-bold text-gray-900">
+                            {product.name}
+                        </h1>
+                        <div className="flex gap-2 mt-3">
+                            <Badge
+                                variant={product.type === 'frutta' ? 'default' : 'secondary'}
+                                className="text-sm"
+                            >
+                                {product.type === 'frutta' ? (
+                                    <>
+                                        <Apple className="h-4 w-4 mr-1" />
+                                        Frutta
+                                    </>
+                                ) : (
+                                    <>
+                                        <Carrot className="h-4 w-4 mr-1" />
+                                        Verdura
+                                    </>
+                                )}
+                            </Badge>
+                            {seasons.map((season, index) => {
+                                const seasonInfo = getSeasonFromMonth(
+                                    product.seasonal_months.find(m => getSeasonFromMonth(m).name === season)
+                                );
+                                return (
+                                    <Badge key={index} className={seasonInfo.color}>
+                                        {season}
                                     </Badge>
-                                    {seasons.map((season, index) => {
-                                        const seasonInfo = getSeasonFromMonth(
-                                            product.seasonal_months.find(m => getSeasonFromMonth(m).name === season)
-                                        );
-                                        return (
-                                            <Badge key={index} className={seasonInfo.color}>
-                                                {season}
-                                            </Badge>
-                                        );
-                                    })}
-                                </div>
-                            </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </header>
