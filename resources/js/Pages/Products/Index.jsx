@@ -2,7 +2,7 @@ import { Head, Link, router } from '@inertiajs/react';
 import { useState } from 'react';
 import { Search, Apple, Carrot } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
+import { Autocomplete } from '@/components/ui/autocomplete';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -26,6 +26,11 @@ export default function Index({ products, currentMonth, filters }) {
     const handleSearch = (e) => {
         e.preventDefault();
         applyFilters({ search: searchTerm });
+    };
+
+    const handleSelectProduct = (product) => {
+        // Navigate directly to the product page when selected from autocomplete
+        router.visit(`/prodotti/${product.slug}`);
     };
 
     const applyFilters = (newFilters) => {
@@ -72,11 +77,11 @@ export default function Index({ products, currentMonth, filters }) {
 
                             {/* Search Bar */}
                             <form onSubmit={handleSearch} className="flex gap-2 w-full md:w-96">
-                                <Input
-                                    type="text"
+                                <Autocomplete
                                     placeholder="Cerca un prodotto..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
+                                    onSelect={handleSelectProduct}
                                     className="flex-1"
                                 />
                                 <Button type="submit" size="icon">

@@ -1,9 +1,9 @@
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 import { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Apple, Carrot } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Input } from '../components/ui/input';
+import { Autocomplete } from '../components/ui/autocomplete';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
 import { useProducts } from '../hooks/useProducts';
@@ -11,6 +11,7 @@ import { useProducts } from '../hooks/useProducts';
 export default function ProductsIndex() {
     const { products, loading } = useProducts();
     const [searchParams, setSearchParams] = useSearchParams();
+    const navigate = useNavigate();
 
     const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '');
     const [selectedType, setSelectedType] = useState(searchParams.get('type') || 'all');
@@ -55,6 +56,11 @@ export default function ProductsIndex() {
     const handleSearch = (e) => {
         e.preventDefault();
         updateFilters({ search: searchTerm });
+    };
+
+    const handleSelectProduct = (product) => {
+        // Navigate directly to the product page when selected from autocomplete
+        navigate(`/prodotti/${product.slug}`);
     };
 
     const updateFilters = (newFilters) => {
@@ -114,11 +120,12 @@ export default function ProductsIndex() {
 
                             {/* Search Bar */}
                             <form onSubmit={handleSearch} className="flex gap-2 w-full md:w-96">
-                                <Input
-                                    type="text"
+                                <Autocomplete
                                     placeholder="Cerca un prodotto..."
                                     value={searchTerm}
                                     onChange={(e) => setSearchTerm(e.target.value)}
+                                    onSelect={handleSelectProduct}
+                                    products={products}
                                     className="flex-1"
                                 />
                                 <Button type="submit" size="icon">
