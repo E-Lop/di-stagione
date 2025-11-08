@@ -150,35 +150,6 @@ export default function ProductShow() {
                                     </div>
                                 </CardContent>
                             </Card>
-
-                            {/* Benefits */}
-                            <Card className="bg-green-50 border-green-200">
-                                <CardHeader>
-                                    <CardTitle className="text-green-800">
-                                        🌱 Perché scegliere prodotti di stagione?
-                                    </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <ul className="space-y-2 text-sm text-green-900">
-                                        <li className="flex items-start">
-                                            <span className="mr-2">✓</span>
-                                            <span>Più sapore e qualità nutrizionale</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <span className="mr-2">✓</span>
-                                            <span>Sostegno all'economia locale</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <span className="mr-2">✓</span>
-                                            <span>Minore impatto ambientale</span>
-                                        </li>
-                                        <li className="flex items-start">
-                                            <span className="mr-2">✓</span>
-                                            <span>Prezzi più convenienti</span>
-                                        </li>
-                                    </ul>
-                                </CardContent>
-                            </Card>
                         </div>
                     </div>
 
