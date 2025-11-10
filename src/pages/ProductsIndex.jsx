@@ -110,7 +110,12 @@ export default function ProductsIndex() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                             <div>
-                                <Link to="/">
+                                <Link to="/" onClick={() => {
+                                    setSelectedMonth(new Date().getMonth() + 1);
+                                    setSelectedType('all');
+                                    setSearchTerm('');
+                                    setSearchParams({});
+                                }}>
                                     <h1 className="text-3xl font-bold text-gray-900 hover:text-green-600 transition-colors cursor-pointer">
                                         🍃 Di Stagione
                                     </h1>

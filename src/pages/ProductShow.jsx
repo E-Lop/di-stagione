@@ -58,7 +58,7 @@ export default function ProductShow() {
                 {/* Header */}
                 <header className="bg-white shadow-sm border-b">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                        <Link to="/" className="inline-block mb-4">
+                        <Link to="/" onClick={() => navigate('/')} className="inline-block mb-4">
                             <h2 className="text-2xl font-bold text-gray-900 hover:text-green-600 transition-colors">
                                 🍃 Di Stagione
                             </h2>
