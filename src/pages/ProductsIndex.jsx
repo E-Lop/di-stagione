@@ -1,5 +1,5 @@
 import { Link, useSearchParams, useNavigate } from 'react-router-dom';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Apple, Carrot } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
@@ -12,6 +12,20 @@ export default function ProductsIndex() {
     const { products, loading } = useProducts();
     const [searchParams, setSearchParams] = useSearchParams();
     const navigate = useNavigate();
+
+    // Restore scroll position when returning to this page
+    useEffect(() => {
+        if (!loading) {
+            const savedScrollPosition = sessionStorage.getItem('productsIndexScrollPosition');
+            if (savedScrollPosition) {
+                // Use setTimeout to ensure DOM is fully rendered
+                setTimeout(() => {
+                    window.scrollTo(0, parseInt(savedScrollPosition, 10));
+                    sessionStorage.removeItem('productsIndexScrollPosition');
+                }, 0);
+            }
+        }
+    }, [loading]);
 
     const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '');
     const [selectedType, setSelectedType] = useState(searchParams.get('type') || 'all');
@@ -206,6 +220,9 @@ export default function ProductsIndex() {
                                     key={product.id}
                                     to={`/prodotti/${product.slug}`}
                                     className="group"
+                                    onClick={() => {
+                                        sessionStorage.setItem('productsIndexScrollPosition', window.scrollY.toString());
+                                    }}
                                 >
                                     <Card className="h-full hover:shadow-lg transition-shadow duration-200">
                                         {product.image_url && (
