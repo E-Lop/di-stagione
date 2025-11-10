@@ -5,9 +5,15 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ProductsIndex from './pages/ProductsIndex';
 import ProductShow from './pages/ProductShow';
+import ScrollToTop from './components/ScrollToTop';
 
 function Layout() {
-    return <Outlet />;
+    return (
+        <>
+            <Outlet />
+            <ScrollToTop />
+        </>
+    );
 }
 
 const router = createBrowserRouter([
