@@ -7,13 +7,18 @@ Una web app statica moderna per scoprire e catalogare tutta la frutta e verdura 
 - ⚡ **App statica ultra-veloce**: Nessun backend, caricamento istantaneo, hosting gratuito su Netlify
 - 🔎 **Autocomplete intelligente**: Ricerca con suggerimenti in tempo reale mentre digiti
 - 📅 **Visualizzazione per mese**: Scopri quali prodotti sono di stagione in ogni mese dell'anno
+- 🗓️ **Mese corrente automatico**: La homepage mostra automaticamente i prodotti del mese corrente
 - 🌸 **Filtri per stagione**: Naviga i prodotti per primavera, estate, autunno e inverno
 - 🔍 **Ricerca avanzata**: Cerca facilmente qualsiasi frutto o verdura con navigazione da tastiera
 - 🍎 **Filtri per tipo**: Filtra tra frutta e verdura
+- 🔤 **Ordinamento alfabetico**: Tutti i prodotti sono ordinati automaticamente A-Z
 - 📱 **Design responsivo**: Interfaccia moderna e mobile-friendly
 - 🖼️ **Immagini AI**: Immagini generate con Bing AI per qualità uniforme
 - 📖 **Pagine di dettaglio**: Informazioni complete su ogni prodotto con descrizione e periodo di stagionalità
+- 🔗 **Badge interattivi**: Clicca sui mesi nella pagina di dettaglio per vedere tutti i prodotti di quel periodo
 - ⌨️ **Navigazione da tastiera**: Supporto completo per frecce, Enter ed Esc nell'autocomplete
+- 📍 **Memoria posizione**: La posizione di scroll viene conservata quando torni dalla pagina di dettaglio
+- 🔝 **Scroll to top**: Pulsante floating per tornare rapidamente in cima alla pagina
 
 ## 🛠️ Tecnologie Utilizzate
 
@@ -72,19 +77,21 @@ di-stagione/
 │   │   └── products.json             # Dati prodotti stagionali
 │   └── images/                       # Immagini prodotti (generate con Bing AI)
 ├── src/
-│   ├── components/ui/                # Componenti Shadcn UI
-│   │   ├── autocomplete.jsx          # Autocomplete con suggerimenti
-│   │   ├── badge.jsx
-│   │   ├── button.jsx
-│   │   ├── card.jsx
-│   │   └── input.jsx
+│   ├── components/
+│   │   ├── ui/                       # Componenti Shadcn UI
+│   │   │   ├── autocomplete.jsx      # Autocomplete con suggerimenti
+│   │   │   ├── badge.jsx
+│   │   │   ├── button.jsx
+│   │   │   ├── card.jsx
+│   │   │   └── input.jsx
+│   │   └── ScrollToTop.jsx           # Pulsante floating scroll to top
 │   ├── hooks/
 │   │   └── useProducts.js            # Hook per gestione prodotti
 │   ├── lib/
 │   │   └── utils.js                  # Utility functions
 │   ├── pages/
-│   │   ├── ProductsIndex.jsx         # Pagina principale con autocomplete
-│   │   └── ProductShow.jsx           # Pagina dettaglio prodotto
+│   │   ├── ProductsIndex.jsx         # Pagina principale con filtri e memoria scroll
+│   │   └── ProductShow.jsx           # Pagina dettaglio con badge interattivi
 │   ├── index.css                     # Stili Tailwind
 │   └── main.jsx                      # Entry point React
 ├── index.html                        # HTML template
@@ -101,10 +108,14 @@ di-stagione/
   - Navigazione da tastiera (frecce, Enter, Esc)
   - Visualizzazione immagini e dettagli prodotto
   - Limite minimo 2 caratteri, massimo 10 suggerimenti
+  - Ordinamento alfabetico automatico dei risultati
+- **ScrollToTop**: Pulsante floating per tornare in cima alla pagina
+  - Appare automaticamente dopo aver scrollato oltre la viewport
+  - Animazione smooth per una migliore UX
 - **Button**: Pulsanti con varianti multiple
 - **Card**: Card per visualizzare i prodotti
 - **Input**: Input per la ricerca
-- **Badge**: Badge per categorie e stagioni
+- **Badge**: Badge per categorie e stagioni (ora interattivi nella pagina di dettaglio)
 
 ## 📊 Struttura Dati
 
