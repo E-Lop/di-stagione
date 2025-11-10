@@ -35,7 +35,10 @@ export default function ProductShow() {
         return (
             <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex flex-col items-center justify-center">
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">Prodotto non trovato</h1>
-                <Link to="/">
+                <Link to="/" onClick={() => {
+                    sessionStorage.removeItem('productsIndexScrollPosition');
+                    window.scrollTo(0, 0);
+                }}>
                     <Button className="gap-2">
                         <ArrowLeft className="h-4 w-4" />
                         Torna alla home
@@ -58,7 +61,11 @@ export default function ProductShow() {
                 {/* Header */}
                 <header className="bg-white shadow-sm border-b">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                        <Link to="/" onClick={() => navigate('/')} className="inline-block mb-4">
+                        <Link to="/" onClick={() => {
+                            sessionStorage.removeItem('productsIndexScrollPosition');
+                            window.scrollTo(0, 0);
+                            navigate('/');
+                        }} className="inline-block mb-4">
                             <h2 className="text-2xl font-bold text-gray-900 hover:text-green-600 transition-colors">
                                 🍃 Di Stagione
                             </h2>
@@ -146,7 +153,11 @@ export default function ProductShow() {
                                                     key={month}
                                                     variant="outline"
                                                     className={`${seasonInfo.color} cursor-pointer hover:opacity-80 transition-opacity`}
-                                                    onClick={() => navigate(`/?month=${month}`)}
+                                                    onClick={() => {
+                                                        sessionStorage.removeItem('productsIndexScrollPosition');
+                                                        window.scrollTo(0, 0);
+                                                        navigate(`/?month=${month}`);
+                                                    }}
                                                 >
                                                     {monthNames[month - 1]}
                                                 </Badge>

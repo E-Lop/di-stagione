@@ -129,6 +129,8 @@ export default function ProductsIndex() {
                                     setSelectedType('all');
                                     setSearchTerm('');
                                     setSearchParams({});
+                                    sessionStorage.removeItem('productsIndexScrollPosition');
+                                    window.scrollTo(0, 0);
                                 }}>
                                     <h1 className="text-3xl font-bold text-gray-900 hover:text-green-600 transition-colors cursor-pointer">
                                         🍃 Di Stagione
