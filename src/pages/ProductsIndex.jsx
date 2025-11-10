@@ -110,9 +110,11 @@ export default function ProductsIndex() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                             <div>
-                                <h1 className="text-3xl font-bold text-gray-900">
-                                    🍃 Di Stagione
-                                </h1>
+                                <Link to="/">
+                                    <h1 className="text-3xl font-bold text-gray-900 hover:text-green-600 transition-colors cursor-pointer">
+                                        🍃 Di Stagione
+                                    </h1>
+                                </Link>
                                 <p className="text-gray-600 mt-1">
                                     Scopri frutta e verdura di stagione in Italia
                                 </p>
