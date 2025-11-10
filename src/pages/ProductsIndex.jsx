@@ -47,24 +47,26 @@ export default function ProductsIndex() {
     };
 
     const filteredProducts = useMemo(() => {
-        return products.filter(product => {
-            // Filter by search term
-            if (searchTerm && !product.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-                return false;
-            }
+        return products
+            .filter(product => {
+                // Filter by search term
+                if (searchTerm && !product.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+                    return false;
+                }
 
-            // Filter by type
-            if (selectedType !== 'all' && product.type !== selectedType) {
-                return false;
-            }
+                // Filter by type
+                if (selectedType !== 'all' && product.type !== selectedType) {
+                    return false;
+                }
 
-            // Filter by month - only apply when there's no search term
-            if (!searchTerm && !product.seasonal_months.includes(selectedMonth)) {
-                return false;
-            }
+                // Filter by month - only apply when there's no search term
+                if (!searchTerm && !product.seasonal_months.includes(selectedMonth)) {
+                    return false;
+                }
 
-            return true;
-        });
+                return true;
+            })
+            .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically A-Z
     }, [products, searchTerm, selectedType, selectedMonth]);
 
     const handleSearch = (e) => {

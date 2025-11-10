@@ -34,6 +34,7 @@ const Autocomplete = React.forwardRef(({
                 product.name.toLowerCase().includes(searchLower) ||
                 (product.description && product.description.toLowerCase().includes(searchLower))
             )
+            .sort((a, b) => a.name.localeCompare(b.name)) // Sort alphabetically A-Z
             .slice(0, maxSuggestions);
     }, [value, products, minChars, maxSuggestions]);
 
