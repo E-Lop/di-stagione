@@ -1,5 +1,7 @@
 # 🍃 Di Stagione - Catalogo Frutta e Verdura di Stagione in Italia
 
+🌐 **[Prova l'app live](https://di-stagione.netlify.app/)**
+
 Una web app statica moderna per scoprire e catalogare tutta la frutta e verdura di stagione in Italia, costruita con React, React Router, Tailwind CSS e Shadcn UI. Ottimizzata per il deploy su Netlify.
 
 ## ✨ Caratteristiche
