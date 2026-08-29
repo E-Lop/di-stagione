@@ -25,7 +25,7 @@ export default function ProductShow() {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center">
+            <div className="min-h-screen bg-linear-to-b/srgb from-green-50 to-white flex items-center justify-center">
                 <div className="text-xl text-gray-600">Caricamento...</div>
             </div>
         );
@@ -33,7 +33,7 @@ export default function ProductShow() {
 
     if (!product) {
         return (
-            <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex flex-col items-center justify-center">
+            <div className="min-h-screen bg-linear-to-b/srgb from-green-50 to-white flex flex-col items-center justify-center">
                 <h1 className="text-4xl font-bold text-gray-900 mb-4">Prodotto non trovato</h1>
                 <Link to="/" onClick={() => {
                     sessionStorage.removeItem('productsIndexScrollPosition');
@@ -57,9 +57,9 @@ export default function ProductShow() {
                 <meta name="description" content={product.description} />
             </Helmet>
 
-            <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+            <div className="min-h-screen bg-linear-to-b/srgb from-green-50 to-white">
                 {/* Header */}
-                <header className="bg-white shadow-sm border-b">
+                <header className="bg-white shadow-xs border-b">
                     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                         <Link to="/" onClick={() => {
                             sessionStorage.removeItem('productsIndexScrollPosition');
