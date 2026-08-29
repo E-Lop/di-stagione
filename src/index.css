@@ -118,4 +118,13 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Il preflight della v4 porta i <button> a cursor:default, allineandosi al
+     comportamento nativo del browser. Qui nessun bottone dichiara cursor-pointer,
+     quindi senza questa regola i filtri e il tasto cerca perderebbero la manina.
+     Snippet dalla guida ufficiale di migrazione v3 -> v4. */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
