@@ -1,6 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Token shadcn: `inline` mantiene hsl(var(--...)) nel punto d'uso,
+   così il tema .dark continua a funzionare ridefinendo le variabili sotto. */
+@theme inline {
+  --font-sans: Figtree, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+/* v4 ridefinisce la palette di default in OKLCH: green-500 e green-600 si spostano
+   di dE 0.027 / 0.024 in OKLab (sopra il JND ~0.02) e finiscono fuori dal gamut sRGB,
+   quindi su display P3 renderebbero piu' sature. Qui la palette in uso resta ai
+   valori esatti della v3 perche' la migrazione non doveva cambiare la resa.
+   Per adottare la palette OKLCH della v4 basta cancellare questo blocco. */
+@theme {
+  --color-gray-100: rgb(243 244 246);
+  --color-gray-200: rgb(229 231 235);
+  --color-gray-300: rgb(209 213 219);
+  --color-gray-400: rgb(156 163 175);
+  --color-gray-500: rgb(107 114 128);
+  --color-gray-600: rgb(75 85 99);
+  --color-gray-700: rgb(55 65 81);
+  --color-gray-900: rgb(17 24 39);
+  --color-blue-100: rgb(219 234 254);
+  --color-blue-800: rgb(30 64 175);
+  --color-green-50: rgb(240 253 244);
+  --color-green-100: rgb(220 252 231);
+  --color-green-500: rgb(34 197 94);
+  --color-green-600: rgb(22 163 74);
+  --color-green-700: rgb(21 128 61);
+  --color-green-800: rgb(22 101 52);
+  --color-orange-100: rgb(255 237 213);
+  --color-orange-800: rgb(154 52 18);
+  --color-yellow-100: rgb(254 249 195);
+  --color-yellow-800: rgb(133 77 14);
+}
 
 @layer base {
   :root {

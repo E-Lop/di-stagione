@@ -107,7 +107,7 @@ export default function ProductsIndex() {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gradient-to-b from-green-50 to-white flex items-center justify-center">
+            <div className="min-h-screen bg-linear-to-b/srgb from-green-50 to-white flex items-center justify-center">
                 <div className="text-xl text-gray-600">Caricamento...</div>
             </div>
         );
@@ -120,9 +120,9 @@ export default function ProductsIndex() {
                 <meta name="description" content="Scopri frutta e verdura di stagione in Italia. Trova i prodotti freschi del mese e impara a mangiare sostenibile." />
             </Helmet>
 
-            <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
+            <div className="min-h-screen bg-linear-to-b/srgb from-green-50 to-white">
                 {/* Header */}
-                <header className="bg-white shadow-sm border-b">
+                <header className="bg-white shadow-xs border-b">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                             <div>
@@ -163,7 +163,7 @@ export default function ProductsIndex() {
 
                 <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     {/* Current Season Banner */}
-                    <div className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg p-6 mb-8">
+                    <div className="bg-linear-to-r/srgb from-green-600 to-green-700 text-white rounded-lg p-6 mb-8">
                         <h2 className="text-2xl font-bold mb-2">
                             {seasonNames[selectedMonth]} - {monthNames[selectedMonth - 1]}
                         </h2>
@@ -205,7 +205,7 @@ export default function ProductsIndex() {
                             <select
                                 value={selectedMonth}
                                 onChange={(e) => handleMonthChange(parseInt(e.target.value))}
-                                className="min-w-[150px] rounded-md border border-gray-300 bg-white pl-4 pr-10 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 cursor-pointer"
+                                className="min-w-[150px] rounded-md border border-gray-300 bg-white pl-4 pr-10 py-2 focus:outline-hidden focus:ring-2 focus:ring-green-500 cursor-pointer"
                             >
                                 {monthNames.map((month, index) => (
                                     <option key={index} value={index + 1}>
